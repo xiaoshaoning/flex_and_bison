@@ -23,7 +23,7 @@ struct ast * newast(int nodetype, struct ast *l, struct ast *r)
 struct ast * newnum(int d)
 {
     struct numval * a = malloc(sizeof(struct numval));
-  
+
     if (!a)
     {
         yyerror("out of space.");
@@ -39,8 +39,8 @@ struct ast * newnum(int d)
 int eval(struct ast *a)
 {
     int v; /* calculated value of this subtree */
-    
-    switch(a->nodetype) 
+
+    switch(a->nodetype)
     {
         case 'K': v = ((struct numval *)a)->number; break;
         case '+': v = eval(a->l) + eval(a->r); break;
@@ -81,7 +81,7 @@ void yyerror(char *s, ...)
 {
     va_list ap;
     va_start(ap, s);
-    
+
     fprintf(stderr, "%d: error: ", yylineno);
     vfprintf(stderr, s, ap);
     fprintf(stderr, "\n");
