@@ -448,7 +448,7 @@ static const yytype_uint8 yyrline[] =
 {
        0,    37,    37,    38,    39,    40,    43,    44,    52,    53,
       54,    55,    56,    57,    58,    59,    60,    61,    62,    63,
-      64,    67,    68,    71,    72,    75,    76,    80,    84
+      64,    67,    68,    71,    72,    75,    76,    81,    85
 };
 #endif
 
@@ -1395,27 +1395,28 @@ yyreduce:
     {
                                        printf("=%4.4g\n", eval((yyvsp[-1].a)));
                                        treefree((yyvsp[-1].a));
+                                       printf("> ");
                                    }
-#line 1400 "fb3-2.tab.c" /* yacc.c:1646  */
+#line 1401 "fb3-2.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 80 "fb3-2.y" /* yacc.c:1646  */
+#line 81 "fb3-2.y" /* yacc.c:1646  */
     {
                                                         dodef((yyvsp[-6].s), (yyvsp[-4].sl), (yyvsp[-1].a));
                                                         printf("Defined %s\n> ", (yyvsp[-6].s)->name);
                                                     }
-#line 1409 "fb3-2.tab.c" /* yacc.c:1646  */
+#line 1410 "fb3-2.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 84 "fb3-2.y" /* yacc.c:1646  */
+#line 85 "fb3-2.y" /* yacc.c:1646  */
     { yyerrok; printf("> "); }
-#line 1415 "fb3-2.tab.c" /* yacc.c:1646  */
+#line 1416 "fb3-2.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1419 "fb3-2.tab.c" /* yacc.c:1646  */
+#line 1420 "fb3-2.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

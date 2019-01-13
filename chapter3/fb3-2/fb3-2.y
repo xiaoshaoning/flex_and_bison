@@ -76,6 +76,7 @@ calclist: /* nothing */
    | calclist stmt EOL             {
                                        printf("=%4.4g\n", eval($2));
                                        treefree($2);
+                                       printf("> ");
                                    }
    | calclist LET NAME '(' symlist ')' '=' list EOL {
                                                         dodef($3, $5, $8);
